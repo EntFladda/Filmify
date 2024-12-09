@@ -1,13 +1,23 @@
 {
   "project_info": {
+<<<<<<< HEAD
     "project_number": "948578827288",
     "project_id": "filmify-aac45",
     "storage_bucket": "filmify-aac45.firebasestorage.app"
+=======
+    "project_number": "106746503202",
+    "project_id": "filmify-6cdb0",
+    "storage_bucket": "filmify-6cdb0.firebasestorage.app"
+>>>>>>> 36738c6e5d39777baa1f51e7b0a2209ff9a23db0
   },
   "client": [
     {
       "client_info": {
+<<<<<<< HEAD
         "mobilesdk_app_id": "1:948578827288:android:0c7102e84632ea0ff9576d",
+=======
+        "mobilesdk_app_id": "1:106746503202:android:d500ef027a1c124cedaa7b",
+>>>>>>> 36738c6e5d39777baa1f51e7b0a2209ff9a23db0
         "android_client_info": {
           "package_name": "com.example.filmify"
         }
@@ -15,7 +25,11 @@
       "oauth_client": [],
       "api_key": [
         {
+<<<<<<< HEAD
           "current_key": "AIzaSyD1BZlAoeu-IZGZpK21K2GAxbo9TSl025E"
+=======
+          "current_key": "AIzaSyCZK2_b5MCiTVnnJ9tSX0ebOetIdhfvBlE"
+>>>>>>> 36738c6e5d39777baa1f51e7b0a2209ff9a23db0
         }
       ],
       "services": {

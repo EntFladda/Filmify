@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+import 'package:firebase_core/firebase_core.dart';
+=======
 import 'package:filmify/screens/splash.dart';
+>>>>>>> 663e4cb830dc071dcdeb0f8aad3acac1e35bf8dc
 import 'package:flutter/material.dart';
+import 'package:filmify/screens/splash_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
