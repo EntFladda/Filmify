@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "106746503202",
+    "project_id": "filmify-6cdb0",
+    "storage_bucket": "filmify-6cdb0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106746503202:android:d500ef027a1c124cedaa7b",
+        "android_client_info": {
+          "package_name": "com.example.filmify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZK2_b5MCiTVnnJ9tSX0ebOetIdhfvBlE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

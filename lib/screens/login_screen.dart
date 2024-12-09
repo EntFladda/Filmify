@@ -1,13 +1,33 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:filmify/screens/bottom_nav_bar.dart';
 import 'package:filmify/screens/register_screen.dart';
-import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController emailController = TextEditingController();
+    final TextEditingController passwordController = TextEditingController();
     double buttonWidth = MediaQuery.of(context).size.width * 0.8;
+
+    Future<void> login() async {
+      try {
+        await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: emailController.text,
+          password: passwordController.text,
+        );
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const BottomNavBar()),
+        );
+      } catch (e) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Failed to login: $e')),
+        );
+      }
+    }
 
     return Scaffold(
       body: Container(
@@ -100,6 +120,7 @@ class LoginScreen extends StatelessWidget {
                                 ),
                                 const SizedBox(height: 5),
                                 TextField(
+                                  controller: emailController,
                                   decoration: InputDecoration(
                                     filled: true,
                                     fillColor: Colors.white,
@@ -127,6 +148,7 @@ class LoginScreen extends StatelessWidget {
                                 ),
                                 const SizedBox(height: 5),
                                 TextField(
+                                  controller: passwordController,
                                   obscureText: true,
                                   decoration: InputDecoration(
                                     filled: true,
@@ -161,14 +183,7 @@ class LoginScreen extends StatelessWidget {
                                 SizedBox(
                                   width: buttonWidth,
                                   child: ElevatedButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const BottomNavBar()),
-                                      );
-                                    },
+                                    onPressed: login,
                                     style: ButtonStyle(
                                       backgroundColor: WidgetStateProperty.all(
                                           const Color(0xFF5751F7)),
